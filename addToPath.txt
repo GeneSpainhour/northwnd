@@ -1,0 +1,14 @@
+
+
+
+
+PATH %PATH%;.\node_modules\.bin
+
+// debug nodejs applications in the chrome
+node --inspect --debug-brk node_modules\angular2-template-loader\index.js
+
+
+
+
+   // {test: /\.component.ts$/, use:[ 'awesome-typescript-loader','angular2-template-loader']},
+    // {test: /\.ts$/, exclude: /\.component.ts$/, use: 'awesome-typescript-loader'},

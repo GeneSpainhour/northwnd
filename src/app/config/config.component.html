@@ -1,0 +1,55 @@
+﻿
+
+<div class='panel panel-primary' *ngIf="rdy">
+	<div class='panel-heading'>
+		{{pageTitle}}
+	</div>
+	<div class='has-error' *ngIf='errorMessage'>Error: {{errorMessage | json}}</div>
+	<!-- Filter the Products   -->
+	<div class='panel-body' *ngIf="configItems">
+		<p>
+			We're building the configuration service, which provides urls bases on target name. we just open
+			fire it off when we load this page.
+		</p>
+		<p>
+			<label for="config-key-ddl">Config Items</label>
+			<div *ngFor="let item of configItems$ | async ">
+				<div>Name: {{item.name}}</div>
+				<div>Value: {{item.value}}</div>
+			</div>
+			<!--<select name="serverKey" [(ngModel)]="serverKey" (change)="onChange($event.target.value)">
+				<option *ngFor="let k of keys()" [value]="k.value">{{k.text}}</option>
+			</select>-->
+		</p>
+
+		<!--<a class="btn btn-primary" (click)="runConfig()">Run</a>-->
+	</div>
+
+	<div class='display' *ngIf='infoMessages'>
+
+		<!--<p><input type="checkbox" (click)="useJson=!useJson" [checked]="useJson" />useJson? {{useJson}}</p>-->
+		<!--<ul *ngIf="useJson" (click)="useJson=!useJson">-->
+		<ul >
+			Info | Json
+			<li *ngFor="let m of infoMessages">
+				{{ m | json}}
+			</li>
+		</ul>
+		<!--<ul *ngIf="!useJson"  (click)="useJson=!useJson">
+			Info
+			<li *ngFor="let m of infoMessages"> {{m}}</li>
+		</ul>-->
+	</div>
+
+	<!--<div class='display' *ngIf='configItems'>
+		Display:
+		<p>selected: {{serverKey}}</p>
+		<ul>
+			<li>
+				{{configItems|json}}
+			</li>
+		</ul>
+
+	</div>-->
+
+</div>

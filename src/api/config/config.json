@@ -1,0 +1,6 @@
+{
+    "configItems": [
+
+        { "name": "key-server", "value": "http://localhost:2100" }, { "name": "northwnd", "value": "http://localhost:45447" }
+    ]
+}

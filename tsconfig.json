@@ -1,0 +1,29 @@
+{
+    "stuff-i-threw-away":[
+        "node_modules/**/*.d.ts"
+        , { "outDir": "./dist/js"}
+        , {"lib": [ "es5","dom", "scripthost"]}
+        , {"moduleResolution": "classic"}
+        , { "module": "commonjs"}
+    ]
+    ,"compilerOptions": {
+       
+        "target": "es5",
+     
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+         "compileOnSave": false,
+        "outDir": "./dist" 
+    },
+    "include": [
+          "src/**/*.ts"
+ 
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "useWebpackText": true,
+        "useCache" : true
+    }
+  
+}
