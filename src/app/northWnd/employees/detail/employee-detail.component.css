@@ -1,0 +1,31 @@
+.employee-detail {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px 100px;
+}
+
+.employee-detail .title {
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.employee-detail .body {}
+
+.employee-detail .body .ele {}
+
+.employee-detail .body .ele label {
+    text-align: right;
+    width: 100px;
+    margin-right: 5px;
+}
+
+.employee-detail .body .ele input {
+    width: 220px;
+}
+
+.employee-detail .controls>div {
+    text-align: right;
+    margin-right: 18%;
+    margin-top: 10px;
+}

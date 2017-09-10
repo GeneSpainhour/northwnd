@@ -1,0 +1,58 @@
+<style>
+    .notifier {
+        margin: 10px;
+        min-height: 30px;
+        border-radius: 4px;
+    }
+
+        .notifier.msg {
+            background-color: #1AB394;
+            padding: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .notifier.error {
+            border: 1px solid red;
+            background-color: yellow;
+        }
+
+    span {
+        width: 20px;
+        height: 20px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 3px;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+        
+    .throbber {
+        position: absolute;
+        z-index: 500;
+        top: 100px;
+        left: 500px;
+    }
+          
+</style>
+<div class="notify-wrapper">
+    <div class='notifier'>
+        <div class='notifier msg' *ngIf='showNotifier'>  {{msg}} </div>
+        <div class='notifier error' *ngIf='errors && errors.length'>
+
+            <ul>
+                Errors
+                <span (click)='clearErrors($event)'>close</span>
+                <li *ngFor='let e of errors'> {{e}} </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="throbber-wrap" *ngIf="showThrobber">
+
+        <div class="throbber">
+            <img src="assets/img/throbber.gif" />
+        </div>
+    </div>
+    <div class="n-display"></div>
+</div>

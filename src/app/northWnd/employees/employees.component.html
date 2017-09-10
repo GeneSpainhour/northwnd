@@ -1,0 +1,11 @@
+<div class="employees">
+    <div class="display"></div>
+
+    <div class="row" [ngSwitch]="currentView">
+
+        <emp-edit *ngSwitchDefault [mode]="currentView" [item]="selectedItem" (onError)="onChildError($event)" (onAction)="onChildEvent($event)"></emp-edit>
+
+        <emp-list *ngSwitchCase="vuList" [items]="items" (stdout)="snkListStdOut($event)"></emp-list>
+    </div>
+
+</div>

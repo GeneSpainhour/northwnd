@@ -1,0 +1,21 @@
+<div class="northwnd">
+
+    <ul class="nav navbar-nav">
+        <li *ngFor="let tab of tabs">
+            <a [ngClass]="{'btn': true, 'btn-primary': tab.selected, 'btn-default': !tab.selected}" role="button" aria-expanded="false" (click)="toggle(tab.tabName)"> {{tab.tabName}} </a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="content Employees" *ngIf="show('Employees')">
+            <employees></employees>
+        </div>
+
+
+    </div>
+
+
+
+
+
+</div>

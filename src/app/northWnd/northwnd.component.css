@@ -1,0 +1,6 @@
+/* component css goes here */
+
+.northwnd .nav.navbar-nav a {
+    height: 40px;
+    line-height: 8px;
+}
